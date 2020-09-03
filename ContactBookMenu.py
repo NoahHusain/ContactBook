@@ -29,7 +29,7 @@ def MainMenu():
                 "What is the first name of the contact you wish to delete: ")
             Contact = MyContactBook.contactlookup(findcontact)
             for i in range(len(Contact)):
-                print("Poop", Contact[i][0], Contact[i][1], Contact[i]
+                print(Contact[i][0], Contact[i][1], Contact[i]
                       [2], Contact[i][3], Contact[i][4], Contact[i][5])
 
             confirm_delete = input(
