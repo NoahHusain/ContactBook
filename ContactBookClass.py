@@ -13,9 +13,10 @@ class ContactBook:
         )
         self.mycursor = self.mydb.cursor()
 
-    def createcontact(self, FirstName, LastName, Address, Number, Email):
-        sql = "INSERT INTO contact_book (first_name, last_name, address, number, email) VALUES (%s, %s, %s, %s, %s)"
-        val = (FirstName, LastName, Address, Number, Email)
+    def createcontact(self, FirstName, LastName, StreetAddress, City, State, Zipcode, Number, Email):
+        sql = "INSERT INTO contact_book (first_name, last_name, street_address, city, state, zip_code, number, email) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+        val = (FirstName, LastName, StreetAddress,
+               City, State, Zipcode, Number, Email)
         self.mycursor.execute(sql, val)
         self.mydb.commit()
         print("1 Record Added to Contact Book")
