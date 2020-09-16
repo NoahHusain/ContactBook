@@ -13,11 +13,14 @@ def MainMenu():
             FirstName = input(
                 "What is the first name of the contact: ").lower()
             LastName = input("What is the last name of the contact: ").lower()
-            Address = input("What is the address: ").lower()
+            StreetAddress = input("What is the street address: ").lower()
+            City = input("What is the city: ").lower()
+            State = input("What is the state: ").lower()
+            Zipcode = input("What is the zip code: ").lower()
             Number = input("What is the phone number: ").lower()
             Email = input("What is the email of the contact: ").lower()
             MyContactBook.createcontact(
-                FirstName, LastName, Address, Number, Email)
+                FirstName, LastName, StreetAddress, City, State, Zipcode, Number, Email)
 
         elif welcome_message == "find":
             fetchcontact = input(
@@ -30,7 +33,7 @@ def MainMenu():
             Contact = MyContactBook.contactlookup(findcontact)
             for i in range(len(Contact)):
                 print(Contact[i][0], Contact[i][1], Contact[i]
-                      [2], Contact[i][3], Contact[i][4], Contact[i][5])
+                      [2], Contact[i][3], Contact[i][4], Contact[i][5], Contact[i][6], Contact[i][7], Contact[i][8])
 
             confirm_delete = input(
                 "Are you sure you wish to delete the above contact: ").lower()
